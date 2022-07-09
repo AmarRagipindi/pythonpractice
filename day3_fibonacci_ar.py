@@ -3,8 +3,9 @@ num1 = 0
 num2 = 1
 num = 0
 while givenNumber > 0:
-    print(num)
+    print(num1)
     num = num1 + num2
     num1 = num2
     num2 = num
     givenNumber = givenNumber - 1
+
