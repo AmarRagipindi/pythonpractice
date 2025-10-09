@@ -128,7 +128,10 @@ def performance_test(size=1000000):
     
     for name, method in methods:
         start_time = time.time()
-        result = method(test_list.copy())
+        if method is find_missing_number_binary_search:
+            result = method(test_list.copy())
+        else:
+            result = method(test_list)
         end_time = time.time()
         
         print(f"{name}: {result} (Time: {end_time - start_time:.6f}s)")
