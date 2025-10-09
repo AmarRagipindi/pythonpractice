@@ -88,14 +88,14 @@ def find_missing_number_binary_search(numbers):
     if not numbers:
         return 1
     
-    numbers.sort()  # Ensure the list is sorted
-    left, right = 0, len(numbers) - 1
+    sorted_numbers = sorted(numbers)  # Ensure the list is sorted without modifying the input
+    left, right = 0, len(sorted_numbers) - 1
     
     while left <= right:
         mid = (left + right) // 2
         
-        # If numbers[mid] == mid + 1, missing number is on the right
-        if numbers[mid] == mid + 1:
+        # If sorted_numbers[mid] == mid + 1, missing number is on the right
+        if sorted_numbers[mid] == mid + 1:
             left = mid + 1
         else:
             # Missing number is on the left (or is mid + 1)
